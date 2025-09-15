@@ -1,18 +1,8 @@
-/* Larger view overrides (min-width: 720px) */
-
-#hamburger { display: none; }
-
-.nav {
-  display: flex !important;
-}
-
-.brand h1 { font-size: 1.4rem; }
-
-.gallery {
-  grid-template-columns: repeat(3, 1fr);
-}
-
-.nav a:hover {
-  /* subtle scale on hover for desktop */
-  transform: translateY(-2px);
+/* Larger view overrides */
+@media (min-width: 720px) {
+  #hamburger { display: none; }
+  .nav { display: flex !important; }
+  .brand h1 { font-size: 1.4rem; }
+  .gallery { grid-template-columns: repeat(3, 1fr); }
+  .nav a:hover { transform: translateY(-2px); }
 }
