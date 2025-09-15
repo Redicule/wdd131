@@ -1,0 +1,130 @@
+:root {
+  --bg: #fafafa;
+  --surface: #ffffff;
+  --ink: #222;
+  --muted: #666;
+  --brand: #2a6df2;
+  --accent: #dbe6ff;
+  --radius: 1rem;
+  --space: 1rem;
+}
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: "Poppins", system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  line-height: 1.45;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--surface);
+  border-bottom: 1px solid #eee;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  padding: .75rem var(--space);
+}
+
+#hamburger {
+  font-size: 1.4rem;
+  background: var(--surface);
+  border: 1px solid #ddd;
+  border-radius: .6rem;
+  padding: .35rem .6rem;
+  cursor: pointer;
+}
+
+#hamburger:focus-visible { outline: 2px solid var(--brand); }
+
+.brand h1 {
+  font-size: 1.2rem;
+  margin: 0;
+  font-weight: 700;
+}
+
+.nav {
+  display: none; /* mobile: hidden by default, toggled via JS */
+  flex-wrap: wrap;
+  gap: .5rem;
+  padding: .5rem var(--space) 1rem;
+}
+
+.nav a {
+  text-decoration: none;
+  color: var(--ink);
+  border: 1px solid #ddd;
+  padding: .5rem .8rem;
+  border-radius: .6rem;
+  background: #fff;
+  transition: transform .12s ease, background .2s ease, box-shadow .2s ease;
+}
+
+.nav a:hover,
+.nav a:focus-visible {
+  background: var(--accent);
+  box-shadow: 0 1px 0 #d1d9ff inset;
+  transform: translateY(-1px);
+}
+
+.nav a.active {
+  background: var(--brand);
+  color: #fff;
+  border-color: var(--brand);
+}
+
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1rem var(--space) 2rem;
+}
+
+main h1 {
+  font-family: "Merriweather", serif;
+  font-size: 1.6rem;
+  margin: 1rem 0;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr; /* 1 col on mobile */
+  gap: 1rem;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid #eee;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 1px 0 rgba(0,0,0,.02);
+}
+
+.card img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+figcaption {
+  padding: .75rem 1rem;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.site-footer {
+  margin-top: 2rem;
+  padding: 2rem var(--space);
+  text-align: center;
+  color: var(--muted);
+}
