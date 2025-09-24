@@ -1,0 +1,80 @@
+/* Global CSS Variables */
+:root {
+    --primary-color: #333; /* Dark background color for primary elements */
+    --secondary-color: #444; /* Slightly lighter dark color */
+    --text-color: #f4f4f4; /* Light text color */
+    --background-color: #222; /* Very dark background */
+    --accent-color: #8BC34A; /* Lighter green accent color for buttons, links, etc. */
+    --footer-bg: #111; /* Dark footer background */
+}
+
+/* Body and general layout */
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    text-align: center;
+    padding: 20px;
+}
+
+.hero-image {
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    border-radius: 8px;
+}
+
+h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* Weather section */
+#weather {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    padding: 20px;
+    margin: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Weather icon pseudo-element */
+#weather h2::after {
+    content: url('images/weather-icon.svg'); /* Weather icon as SVG */
+    display: inline-block;
+    margin-left: 10px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: var(--footer-bg);
+    color: var(--text-color);
+}
+
+/* Links and buttons */
+a, button {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    header img {
+        width: 100%;
+    }
+
+    #weather {
+        padding: 10px;
+    }
+}
