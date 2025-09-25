@@ -1,80 +1,89 @@
-/* Global CSS Variables */
 :root {
-    --primary-color: #333; /* Dark background color for primary elements */
-    --secondary-color: #444; /* Slightly lighter dark color */
-    --text-color: #f4f4f4; /* Light text color */
-    --background-color: #222; /* Very dark background */
-    --accent-color: #8BC34A; /* Lighter green accent color for buttons, links, etc. */
-    --footer-bg: #111; /* Dark footer background */
+  --primary-color: #1e90ff;
+  --secondary-color: #f4f4f9;
+  --text-color: #333;
 }
 
-/* Body and general layout */
 body {
-    font-family: Arial, sans-serif;
-    background-color: var(--background-color);
-    color: var(--text-color);
-    margin: 0;
-    padding: 0;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  color: var(--text-color);
+  background: var(--secondary-color);
 }
 
 header {
-    background-color: var(--primary-color);
-    color: var(--text-color);
-    text-align: center;
-    padding: 20px;
+  background: var(--primary-color);
+  color: white;
+  padding: 1rem;
+  text-align: center;
 }
 
-.hero-image {
-    width: 100%;
-    max-width: 1200px;
-    height: auto;
-    border-radius: 8px;
+.hero {
+  position: relative;
+  overflow: hidden;
 }
 
-h1 {
-    font-size: 2.5em;
-    font-weight: bold;
-    margin-bottom: 15px;
+.hero img {
+  width: 100%;
+  display: block;
+  animation: fadeIn 2s ease-in-out;
 }
 
-/* Weather section */
-#weather {
-    background-color: var(--secondary-color);
-    color: var(--text-color);
-    padding: 20px;
-    margin: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+.hero-text {
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  background: rgba(0,0,0,0.5);
+  color: white;
+  padding: 1rem;
+  border-radius: 10px;
+  animation: slideIn 1.5s ease-in-out;
 }
 
-/* Weather icon pseudo-element */
-#weather h2::after {
-    content: url('images/weather-icon.svg'); /* Weather icon as SVG */
-    display: inline-block;
-    margin-left: 10px;
+.weather {
+  padding: 2rem;
+  text-align: center;
 }
 
-/* Footer */
+.weather-icon::after {
+  content: "⛅"; /* Desktop emoticon */
+  margin-left: 0.5rem;
+}
+
+.mobile-icon {
+  display: none;
+}
+
 footer {
-    text-align: center;
-    padding: 10px;
-    background-color: var(--footer-bg);
-    color: var(--text-color);
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 1rem;
 }
 
-/* Links and buttons */
-a, button {
-    color: var(--accent-color);
-    text-decoration: none;
+h1, h2 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 800; /* ExtraBold */
 }
 
-/* Responsive Design */
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from { transform: translateX(-100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+/* Media query for mobile view */
 @media (max-width: 600px) {
-    header img {
-        width: 100%;
-    }
-
-    #weather {
-        padding: 10px;
-    }
+  .weather-icon::after {
+    content: ""; /* Hide desktop emoticon */
+  }
+  .mobile-icon {
+    display: block;
+    margin-top: 1rem;
+  }
 }

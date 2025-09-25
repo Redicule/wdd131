@@ -1,32 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Place - Weather Page</title>
-    <meta name="description" content="WDD 131 – Place.html | Devon Hibbert |">
-    <meta name="author" content="Devon Hibbert">
-    <link rel="stylesheet" href="styles/place.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beautiful Place</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-    <header>
-        <h1>Weather in Beautiful Place</h1>
-        <!-- Hero Image with WebP format -->
-        <img src="images/beautiful.jpg" alt="Beautiful Place" class="hero-image">
-    </header>
+  <header>
+    <h1>Weather in Beautiful Place</h1>
+  </header>
 
-    <section id="weather">
-        <h2>Weather ⛅</h2>
-        <div id="weather-icon"></div>
-        <p>Temperature: <span id="temp">25°C</span></p>
-        <p>Wind Speed: <span id="wind-speed">10 km/h</span></p>
-        <p>Wind Chill: <span id="wind-chill">N/A</span></p>
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <picture>
+        <!-- Responsive image set -->
+        <source srcset="images/beautiful.webp" media="(min-width: 768px)">
+        <img src="images/beautiful.webp" alt="Scenic view of Beautiful Place">
+      </picture>
+      <div class="hero-text">
+        <h2>Welcome to Beautiful Place</h2>
+        <p>Discover the culture, landscapes, and experiences.</p>
+      </div>
     </section>
 
-    <footer>
-        <p>&copy; <span id="current-year"></span> | Last Modified: <span id="last-modified"></span></p>
-    </footer>
+    <!-- Weather Section -->
+    <section class="weather">
+      <h2>Weather <span class="weather-icon"></span></h2>
+      <p>Temperature: <span id="temperature">5</span> °C</p>
+      <p>Wind Speed: <span id="windSpeed">10</span> km/h</p>
+      <p>Wind Chill: <span id="windChill"></span></p>
+      <!-- Placeholder for SVG icon in mobile view -->
+      <div class="mobile-icon">
+        <img src="images/weather-icon.svg" alt="Weather Icon">
+      </div>
+    </section>
+  </main>
 
-    <script src="scripts/place.js"></script>
+  <footer>
+    <p>&copy; <span id="year"></span> | Last Modified: <span id="lastModified"></span></p>
+  </footer>
 </body>
 </html>
