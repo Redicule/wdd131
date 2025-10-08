@@ -1,6 +1,3 @@
-/* filtered-temples.css
-   Minimal, accessible card grid. Follows a clean, content-first design.
-   Uses CSS custom properties for easy theming. */
 :root{
   --bg: #f7f7f8;
   --surface: #ffffff;
