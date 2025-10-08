@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="WDD 131 – Temple Album | Devon Hibbert | Course landing page with cards, and dynamic dates.">
+  <meta name="author" content="Devon Hibbert">
+  <title>Temple Album</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&family=Merriweather:wght@300;700&display=swap" rel="stylesheet">
+  <!-- Mobile-first styles -->
+  <link rel="stylesheet" href="styles/filtered-temples.css">
+</head>
+<body>
+  <header>
+    <div class="wrapper">
+      <h1>Temples</h1>
+      <nav id="mainnav" aria-label="Primary">
+        <ul>
+          <li><a href="#" data-filter="home" class="active" aria-current="page">Home</a></li>
+          <li><a href="#" data-filter="old">Old</a></li>
+          <li><a href="#" data-filter="new">New</a></li>
+          <li><a href="#" data-filter="large">Large</a></li>
+          <li><a href="#" data-filter="small">Small</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrapper" id="main">
+    <section class="controls" aria-live="polite">
+      <p>Filter the temple gallery using the menu above.</p>
+    </section>
+
+    <section id="gallery" aria-label="Temple Gallery">
+      <div id="temple-grid" class="grid"></div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrapper">
+      <span>© <span id="year"></span> • Filtered Temples</span>
+      <span>Last Modified: <span id="lastModified"></span></span>
+    </div>
+  </footer>
+
+  <script src="scripts/filtered-temples.js" defer></script>
+</body>
+</html>
