@@ -56,6 +56,13 @@ nav a[aria-current="page"], nav a.active{
   border-color:transparent;
 }
 
+nav a:hover {
+  background: var(--brand);
+  color: #fff;
+  border-color: transparent;
+  cursor: pointer;
+}
+
 main{
   padding: 1rem 0 2rem;
 }
