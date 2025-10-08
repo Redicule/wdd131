@@ -15,74 +15,38 @@
   <script defer src="scripts/temples.js"></script>
 </head>
 <body>
-  <header class="site-header">
-    <div class="brand">
-      <button id="hamburger" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-nav">☰</button>
-      <h1>Temple Album</h1>
+  <header>
+    <div class="wrapper">
+      <h1>Temples</h1>
+      <nav id="mainnav" aria-label="Primary">
+        <ul>
+          <li><a href="#" data-filter="home" class="active" aria-current="page">Home</a></li>
+          <li><a href="#" data-filter="old">Old</a></li>
+          <li><a href="#" data-filter="new">New</a></li>
+          <li><a href="#" data-filter="large">Large</a></li>
+          <li><a href="#" data-filter="small">Small</a></li>
+        </ul>
+      </nav>
     </div>
-    <nav id="primary-nav" class="nav">
-      <a href="#" data-filter="all" class="active">Home</a>
-      <a href="#" data-filter="old">Old</a>
-      <a href="#" data-filter="new">New</a>
-      <a href="#" data-filter="large">Large</a>
-      <a href="#" data-filter="small">Small</a>
-    </nav>
   </header>
 
-  <main>
-    <h2>Temples</h2>
-    <section class="gallery" id="gallery">
-      <!-- 9 figures. Use data-year and data-size to enable filtering -->
-      <figure class="card" data-year="1893" data-size="large">
-        <img src="images/salt-lake-temple-1893.jpg" alt="Salt Lake Temple" loading="lazy" width="1200" height="800">
-        <figcaption>Salt Lake Temple (1893)</figcaption>
-      </figure>
+  <main class="wrapper" id="main">
+    <section class="controls" aria-live="polite">
+      <p>Filter the temple gallery using the menu above.</p>
+    </section>
 
-      <figure class="card" data-year="1888" data-size="small">
-        <img src="images/Manti-Utah-Temple-1888.jpg" alt="Manti Utah Temple" loading="lazy" width="1200" height="800">
-        <figcaption>Manti Utah Temple (1888)</figcaption>
-      </figure>
-
-      <figure class="card" data-year="1877" data-size="large">
-        <img src="images/st-george-utah-temple-1877.jpg" alt="St. George Utah Temple" loading="lazy" width="1200" height="800">
-        <figcaption>St. George Utah Temple (1877)</figcaption>
-      </figure>
-
-      <figure class="card" data-year="2004" data-size="small">
-        <img src="images/accra-ghana-temple-2004.jpg" alt="Accra Ghana Temple (placeholder)" loading="lazy" width="1200" height="800">
-        <figcaption>Accra Ghana Temple (2004)</figcaption>
-      </figure>
-
-      <figure class="card" data-year="2010" data-size="large">
-        <img src="images/kyiv-ukraine-temple-2010.jpg" alt="Kyiv Ukraine Temple (placeholder)" loading="lazy" width="1200" height="800">
-        <figcaption>Kyiv Ukraine Temple (2010)</figcaption>
-      </figure>
-
-      <figure class="card" data-year="2019" data-size="small">
-        <img src="images/rome-italy-temple-2019.jpg" alt="Rome Italy Temple (placeholder)" loading="lazy" width="1200" height="800">
-        <figcaption>Rome Italy Temple (2019)</figcaption>
-      </figure>
-
-      <figure class="card" data-year="2020" data-size="large">
-        <img src="images/brasília-brazil-temple-2023.jpg" alt="Brasília Brazil Temple (placeholder)" loading="lazy" width="1200" height="800">
-        <figcaption>Brasília Brazil Temple (2023)</figcaption>
-      </figure>
-
-      <figure class="card" data-year="2008" data-size="small">
-        <img src="images/rexburg-idaho-temple-2008.jpg" alt="Rexburg Idaho Temple (placeholder)" loading="lazy" width="1200" height="800">
-        <figcaption>Rexburg Idaho Temple (2008)</figcaption>
-      </figure>
-
-      <figure class="card" data-year="2016" data-size="large">
-        <img src="images/provo-city-center-temple-2016.jpg" alt="Provo City Center Temple (placeholder)" loading="lazy" width="1200" height="800">
-        <figcaption>Provo City Center Temple (2016)</figcaption>
-      </figure>
+    <section id="gallery" aria-label="Temple Gallery">
+      <div id="temple-grid" class="grid"></div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <p>&copy; <span id="year"></span> | Temple Album</p>
-    <p id="last-modified"></p>
+  <footer>
+    <div class="wrapper">
+      <span>© <span id="year"></span> • Filtered Temples</span>
+      <span>Last Modified: <span id="lastModified"></span></span>
+    </div>
   </footer>
+
+  <script src="temples.js" defer></script>
 </body>
 </html>
