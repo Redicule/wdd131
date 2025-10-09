@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Project Site Plan | Garden Route Eats & Markets</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Playfair+Display:wght@600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/siteplan.css">
+</head>
+<body>
+  <header class="container">
+    <div class="brand">
+      <div class="logo" aria-hidden="true">🍉</div>
+      <div class="titles">
+        <h1>Garden Route Eats & Markets</h1>
+        <p class="subtitle">WDD 131: Week 05 — Website Planning Document</p>
+      </div>
+    </div>
+    <nav aria-label="breadcrumb">
+      <a href="index.html">Home</a>
+      <span aria-hidden="true">/</span>
+      <strong>Site Plan</strong>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section id="overview">
+      <h2>Overview</h2>
+      <p>The website plan serves as a blueprint for the final project. This document outlines the <em>site name</em>, <em>purpose</em>, <em>target user scenarios</em>, <em>color schema</em>, and <em>typography</em> choices. (Wireframes omitted by request.)</p>
+      <p class="note">This plan is a living document and may evolve as the project is implemented.</p>
+    </section>
+
+    <section id="site-name">
+      <h2>1. Site Name</h2>
+      <p><strong>Garden Route Eats &amp; Markets</strong></p>
+      <ul>
+        <li><strong>Why this name?</strong> It captures a directory-style hub for local food, pop-up stalls, markets, and specials across the Garden Route region.</li>
+        <li><strong>Optional domain availability:</strong> <code>gardenroute-eats.co.za</code></li>
+        <li><strong>Logo concept:</strong> A minimal wordmark with a produce icon.</li>
+      </ul>
+    </section>
+
+    <section id="site-purpose">
+      <h2>2. Site Purpose</h2>
+      <p>The site will help residents and visitors discover weekly market dates, vendor highlights, food specials, and directions. It will also include a simple contact form for vendors to apply for a stall and a newsletter signup for shoppers.</p>
+      <ul class="bullets">
+        <li>Curated listings for markets and food events.</li>
+        <li>Vendor spotlights with imagery and short descriptions.</li>
+        <li>“This Week’s Specials” board for quick deals.</li>
+        <li>Contact &amp; vendor-application forms.</li>
+      </ul>
+    </section>
+
+    <section id="scenarios">
+      <h2>3. Scenarios</h2>
+      <ol>
+        <li><strong>“Which markets are open this Friday night and what time do they start?”</strong></li>
+        <li><strong>“How do I apply to sell my products at the Hartenbos night market?”</strong></li>
+        <li><strong>“Are there gluten‑free or vegetarian food options at this weekend’s events?”</strong></li>
+      </ol>
+    </section>
+
+    <section id="colors">
+      <h2>4. Color Schema</h2>
+      <p>The site uses a fresh, high-contrast palette. Each token lists intended usage.</p>
+      <div class="swatches">
+        <div class="swatch" style="--swatch: var(--brand);">
+          <span class="name">--brand</span>
+          <span class="hex">#0F766E</span>
+          <span class="use">Buttons, links, accents</span>
+        </div>
+        <div class="swatch" style="--swatch: var(--brand-600);">
+          <span class="name">--brand-600</span>
+          <span class="hex">#115E59</span>
+          <span class="use">Headers, hovers</span>
+        </div>
+        <div class="swatch" style="--swatch: var(--bg);">
+          <span class="name">--bg</span>
+          <span class="hex">#0B1213</span>
+          <span class="use">Background</span>
+        </div>
+        <div class="swatch" style="--swatch: var(--text);">
+          <span class="name">--text</span>
+          <span class="hex">#E6F1EF</span>
+          <span class="use">Body text</span>
+        </div>
+        <div class="swatch" style="--swatch: var(--muted);">
+          <span class="name">--muted</span>
+          <span class="hex">#A7D6CD</span>
+          <span class="use">Subheadings, borders</span>
+        </div>
+      </div>
+      <p class="note">Contrast checked to aim for WCAG AA for text on backgrounds.</p>
+    </section>
+
+    <section id="typography">
+      <h2>5. Typography</h2>
+      <ul>
+        <li><strong>Playfair Display</strong> — headings (H1–H3)</li>
+        <li><strong>Inter</strong> — body text, navigation, buttons</li>
+      </ul>
+      <div class="type-samples">
+        <h3>Heading Sample — Playfair Display 800</h3>
+        <p>Body Sample — Inter 400. The quick brown fox jumps over the lazy dog. 1234567890</p>
+      </div>
+    </section>
+
+    <footer>
+      <p>WDD 131: Dynamic Web Fundamentals — Week 05 Project Site Plan</p>
+      <p><small>© <span id="year"></span> Garden Route Eats &amp; Markets</small></p>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
