@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Fresh Bites | Home</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Fresh Bites — quick 15–20 minute recipes.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./styles/style.css">
+<script defer src="./js/app.js"></script>
+
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header id="site-header"></header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="hero__text">
+        <h1>Cook Simple. Eat Well.</h1>
+        <p>Fresh Bites shares 15‑20 minute recipes and market‑friendly ideas you can make today.</p>
+        <a class="btn" href="recipes.html">Browse Recipes</a>
+      </div>
+      <picture>
+        <img src="./assets/freshbite.png" alt="Fresh produce at a market" width="1200" height="800" loading="lazy">
+      </picture>
+    </section>
+
+    <section class="features" aria-labelledby="features-title">
+      <h2 id="features-title">Why you’ll love it</h2>
+      <ul class="grid-3">
+        <li><h3>Fast</h3><p>Meals in 15–20 minutes with pantry staples.</p></li>
+        <li><h3>Balanced</h3><p>Veg‑forward with lean proteins and whole grains.</p></li>
+        <li><h3>Budget‑wise</h3><p>Shop smart, waste less, save more.</p></li>
+      </ul>
+    </section>
+
+    <section class="favorites" aria-labelledby="fav-title">
+      <h2 id="fav-title">Your saved recipes</h2>
+      <p class="muted">Favorites you mark on the Recipes page will appear here.</p>
+      <div id="favorites" class="card-grid" data-populate="favorites"></div>
+    </section>
+  </main>
+
+  <footer id="site-footer"></footer>
+</body>
+</html>
